@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main(int argc, const char * argv[]) {
+    // insert code here...
+   
+    
+    int n,i,prime,j;
+    printf("Enter the Number");
+    scanf("%d",&n);
+    printf("Prime Numbers are: \n");
+    for(i=1; i<=n; i++)//2 den n'e kadar olan sayilar'i check yapiyor n (normal kod da 1 den basliyor neden?)
+    {
+        prime=0;// eger sayi 2 ye esit veya 2'den buyuk ise prime,prime oldugu icin 0 sayiyor.
+        for(j=1; j<=n; j++)//diger for loop a giriyor,
+        {
+            if(i%j==0)//
+                prime++;
+        }
+        if(prime==2)
+            printf("%d " ,i);
+    }
+    return 0;
+}
