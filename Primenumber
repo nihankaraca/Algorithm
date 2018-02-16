@@ -1,0 +1,33 @@
+//
+//  main.c
+//  deneme
+//
+//  Created by Nihan Karaca on 2/14/18.
+//
+
+#include <stdio.h>
+//prime number
+
+int main(int argc, const char * argv[]) {
+    // insert code here...
+    
+    int n, i, try=0;
+    
+    printf("Enter a pos. integer");
+    scanf("%d",&n);
+    
+        for(i=2; i<=n/2; ++i)
+    {
+        if(n%i==0)
+        {
+            try=1;//try1 olunca modulasi 1 kaliyor oyuzden try 1 oluyor. yani prime number. eger kalan 0 a esit olursa girilen n sayisi prime degil.
+            break;
+        }
+    }
+    if(try==0)
+        printf("%d is a prime number",n);//kalan 1 oldugu icin flag 0
+    else
+        printf("%d is not prime number",n); //kaln 0 flag 1 oldu
+        
+    return 0;
+}
