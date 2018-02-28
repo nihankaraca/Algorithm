@@ -1,0 +1,51 @@
+//
+//  main.c
+//  quickSort
+//
+//  Created by Nihan Karaca on 2/23/18.
+//  Copyright © 2018 engineerclass. All rights reserved.
+//
+// I think it didnt work... I will upload the new one. 
+#include <stdio.h>
+
+int a[10] = {3,7,2,6,1,4,10,8,2,9};
+
+void swap(int x, int y) {
+    int temp;
+    temp = a[x];
+    a[x] = a[y];
+    a[y] = temp;
+}
+int partition(int L, int R)
+{
+    int p,W;
+    p = R-1;
+    W = L;
+    for(int i=L; i<R; i++)
+        if(a[i] < a[p])
+        {
+            swap(i,W);
+            W++;
+        }
+    swap(p,W);
+    return W;
+}
+void qSort (int L, int R)
+{
+    if(R<L) 
+        return;
+    int p = partition(L,R);
+    qSort(L,p);
+    qSort(p+1,R);
+}
+int main(int argc, const char * argv[]) {
+    // insert code here...
+    for (int i=0; i<10; i++)
+        printf("%d ", a[i]);
+    printf("\n");
+    qSort(0,10);
+    for (int i=0; i<10; i++)
+        printf("%d ", a[i]);
+    printf("\n");
+    return 0;
+}
