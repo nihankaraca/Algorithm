@@ -8,7 +8,7 @@ int main(int argc, const char * argv[]) {
     printf("Enter the Number");
     scanf("%d",&n);
     printf("Prime Numbers are: \n");
-    for(i=1; i<=n; i++)//2 den n'e kadar olan sayilar'i check yapiyor n (normal kod da 1 den basliyor neden?)
+    for(i=1; i<=n; i++)//2 den n'e kadar olan sayilar'i check yapiyor n 
     {
         prime=0;// eger sayi 2 ye esit veya 2'den buyuk ise prime,prime oldugu icin 0 sayiyor.
         for(j=1; j<=n; j++)//diger for loop a giriyor,
